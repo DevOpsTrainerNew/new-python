@@ -1,0 +1,2 @@
+hi this hello.txt file
+new file in 2nd line
