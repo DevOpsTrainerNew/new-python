@@ -36,14 +36,14 @@ jobs:
           # stop the build if there are Python syntax errors or undefined names
           flake8 .
 
-      - name: Run tests
-        run: |
-          pip install pytest setup.py sdist bdist_wheel
-          pytest
-
       - name: Build the project
         run: |
           python setup.py sdist bdist_wheel
+
+      - name: Run tests
+        run: |
+          pip install pytest
+          pytest
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2
